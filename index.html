@@ -14,6 +14,10 @@
             href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
 
         <!-- Favicon -->
         <link
@@ -95,6 +99,14 @@
 
         <!-- Style CSS -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
     </head>
     <body style="height: 10000px">
         <header class="header sticky">
@@ -161,7 +173,13 @@
             <div class="container">
                 <div class="hero__inner">
                     <!-- Content Hero -->
-                    <section class="hero__content">
+                    <section
+                        class="hero__content"
+                        data-aos="fade-right"
+                        data-aos-offset="200"
+                        data-aos-delay="50"
+                        data-aos-duration="1250"
+                    >
                         <span class="section__sub-title"
                             >Digital Smart Wallet</span
                         >
@@ -205,18 +223,37 @@
                             src="./assets/icons/hero-phone.svg"
                             alt=""
                             class="hero__img"
+                            data-aos="fade-left"
+                            data-aos-anchor="#example-anchor"
+                            data-aos-offset="600"
+                            data-aos-duration="500"
                         />
-                        <div class="hero__deposit">
+                        <div
+                            class="hero__deposit"
+                            data-aos="flip-left"
+                            data-aos-offset="200"
+                            data-aos-delay="250"
+                            data-aos-duration="1000"
+                        >
                             <p class="hero__deposit-title">Deposit</p>
                             <p class="hero__deposit-value">$32000</p>
                         </div>
 
-                        <div class="hero-interest">
+                        <div
+                            class="hero-interest"
+                            data-aos="flip-right"
+                            data-aos-offset="200"
+                            data-aos-delay="400"
+                            data-aos-duration="1000"
+                        >
                             <p class="hero-interest__percent">0%</p>
                             <p class="hero-interest__desc">Interest</p>
                         </div>
 
-                        <div class="hero-insurance">
+                        <div
+                            class="hero-insurance animate__animated animate__slideInRight"
+                            data-wow-delay="5000"
+                        >
                             <img
                                 src="./assets/icons/hero-phone-secured.svg"
                                 alt=""
@@ -233,5 +270,101 @@
                 </div>
             </div>
         </section>
+        <main>
+            <section class="works">
+                <div class="container">
+                    <div class="works__inner">
+                        <div class="works__media">
+                            <img
+                                src="./assets/icons/works-bg.svg"
+                                alt=""
+                                class="works__bg-img"
+                            />
+                            <img
+                                src="./assets/images/works-img-01.png"
+                                alt=""
+                                class="works__img"
+                            />
+
+                            <div class="works-authen">
+                                <img
+                                    src="./assets/icons/works-icon-01.svg"
+                                    alt=""
+                                    class="works-authen__icon"
+                                />
+                                <div class="works-authen__info">
+                                    <h3 class="works-authen__title">
+                                        Congratulations
+                                    </h3>
+                                    <p class="works-authen__desc">
+                                        Your account activated
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Decor -->
+                            <img
+                                src="./assets/icons/works-decor-media-01.svg"
+                                alt=""
+                                class="works__decor"
+                            />
+                        </div>
+
+                        <div class="works__content">
+                            <p class="section__sub-title">
+                                Digital Smart Wallet
+                            </p>
+                            <h2 class="section__title works__title">
+                                How It Works
+                            </h2>
+                            <!-- Works Row 1-->
+                            <div class="works-row">
+                                <h3 class="works-row__title">
+                                    1. Open a High Interest Checking account
+                                </h3>
+                                <p class="works-row__desc">
+                                    Fund your bank account with a minimum
+                                    balance of $100. Enroll in 3 minutes or
+                                    less!
+                                </p>
+                            </div>
+
+                            <!-- Works Row 2-->
+                            <div class="works-row">
+                                <h3 class="works-row__title">
+                                    2. 10 point-of-sale transactions each Month
+                                    that are at least $10 each.
+                                </h3>
+                                <p class="works-row__desc">
+                                    Be sure to use your rewards checking account
+                                    as often as possible in order to accue APYI
+                                </p>
+                            </div>
+
+                            <!-- Works Row 3-->
+                            <div class="works-row">
+                                <h3 class="works-row__title">
+                                    3. Receive up to 5.50% APY
+                                </h3>
+                                <p class="works-row__desc">
+                                    The APY you earn will be based on your
+                                    account balance and satisfying the
+                                    transaction requirement.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/wow.min.js"></script>
+
+        <script>
+            AOS.init();
+        </script>
+        <script>
+            new WOW().init();
+        </script>
     </body>
 </html>
